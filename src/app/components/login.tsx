@@ -24,16 +24,13 @@ const Login = () => {
 
       const data = await response.json()
       const { token } = data
-      console.log(data, 'data')
-      // Save the JWT token in localStorage
+      
       localStorage.setItem('token', token)
-
-      // Clear error
       setError(null)
 
-      // Redirect or notify user of successful login
+      
       alert('Login successful! Token saved.')
-      // Redirect to the profile page
+      
       router.push('/profile')
     } catch (error) {
       console.error('Login error:', error)

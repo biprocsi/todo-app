@@ -21,7 +21,6 @@ export default function Home() {
     setTodos(data)
   }
 
-  // First step can be to prevent todos that are empty string from being added
   const addTodo = async () => {
     const res = await fetch('/api/todos', {
       method: 'POST',

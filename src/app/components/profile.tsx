@@ -16,7 +16,7 @@ const Profile = () => {
       const response = await fetch('/api/auth/login', {
         method: 'GET',
         headers: {
-          Authorization: `Bearer ${token}`, // Pass the token in Authorization header
+          Authorization: `Bearer ${token}`, 
         },
       })
 
@@ -26,7 +26,7 @@ const Profile = () => {
 
       const data = await response.json()
       setUser(data.user)
-      setError(null) // Clear any errors
+      setError(null) 
     } catch (error) {
       console.error('Error fetching profile:', error)
       setError('Failed to fetch user profile')
